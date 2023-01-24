@@ -17,12 +17,12 @@ const CartItem = ({id,name,image_url,price,quantity}) => {
                 <span>Price {formatNumber(price)} Bath</span>
             </div>
             <div className='quantity'>
-                <button className='plus-btn' onClick={() => toggleQuantity(id,"increment")}>
-                    <img src={plus} alt=""/>
-                </button>
-                <input type="text" value={quantity} disabled/>
                 <button className='minus-btn' onClick={() => toggleQuantity(id,"decrement")}>
                     <img src={minus} alt=""/>
+                </button>
+                <input type="text" value={quantity} disabled/>
+                <button className='plus-btn' onClick={() => toggleQuantity(id,"increment")}>
+                    <img src={plus} alt=""/>
                 </button>
             </div>
             <div className='total-price'>
